@@ -22,7 +22,6 @@ def bolden(func):
     return wrap
 
 @app.route('/greeting/<name>/<int:age>')
-
 def greeting(name, age):
     return f'<p>Hello, {age} year old {name} </p>'
 
