@@ -7,9 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/foo/<name>')
-def foo(name):
-    return render_template('index1.html', to=name)
 
 @app.route('/whereami')
 def whereami():
