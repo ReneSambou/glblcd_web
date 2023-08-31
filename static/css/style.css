@@ -14,8 +14,30 @@ body{
         align-items: center;
         justify-content: center; 
         flex-direction: column;
+        background-color: #ffffff;
+        width: 250px;
+        height: 300px;
+        border-radius: 10px; 
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 10% 40%;
     }
     .dashboard{
         background: linear-gradient(to right, rgb(42, 128, 128), #ffffff);
     }
-    
+
+    .search{
+        margin-left: 40%;
+        border-radius: 10px; 
+        padding: 10px;
+        border: 1px solid #ccc
+    }
+    .playlist_sec{
+        margin-right: 50%;    
+    }
+    .container1{
+        width: auto;
+        height: auto;
+        background-color: #ffffff;
+        
+    }

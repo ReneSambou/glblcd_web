@@ -1,5 +1,5 @@
-from flask import Flask, render_template 
-
+from flask import Flask, render_template, request
+import database
 
 app = Flask(__name__)
 
@@ -7,10 +7,14 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/submit', methods = ['POST'])
+def dashboard():
+    username = request.form.get('username')
+    password = request.form.get('password')
+    if username in database.users_database and password == database.users_database[username]:
+        return render_template('dashboard.html')
+    
 
-@app.route('/whereami')
-def whereami():
-    return 'Ghana!'
 
 def bolden(func):
     def wrap():
