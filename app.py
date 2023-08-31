@@ -27,6 +27,6 @@ def greeting(name, age):
     return f'<p>Hello, {age} year old {name} </p>'
 
 
-if __name__ == ('__main__'):
+if __name__ == "__main__":
    app.run(debug=True, host='0.0.0.0')
 
