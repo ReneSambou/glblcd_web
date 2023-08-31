@@ -1,19 +1,21 @@
 body{
-background: linear-gradient(to right, #070707, #799479);
-}
-
-.head{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+    background: linear-gradient(to right, #070707, #799479);
+    }
     
+    .head{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        
+        
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        flex-direction: column;
+    }
+    .dashboard{
+        background: linear-gradient(to right, rgb(42, 128, 128), #ffffff);
+    }
     
-}
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    flex-direction: column;
-    
-
-}
