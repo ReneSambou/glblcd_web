@@ -23,8 +23,6 @@ def logout():
     return redirect('/')
         
     
-
-
 def bolden(func):
     def wrap():
         bold = func()
