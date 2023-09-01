@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect, url_for
 import database
 
 app = Flask(__name__)
+app.secret_key = '333abc'
 
 @app.route('/')
 def index():
@@ -12,7 +13,15 @@ def dashboard():
     username = request.form.get('username')
     password = request.form.get('password')
     if username in database.users_database and password == database.users_database[username]:
-        return render_template('dashboard.html')
+        return render_template('dashboard.html', username=username)
+    else:
+        flash('Login failed. Please check your username and password.')
+        return redirect('/')
+    
+@app.route('/logout', methods = ['POST'])
+def logout():
+    return redirect('/')
+        
     
 
 

@@ -8,6 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+
+  <div class="container">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
     <div class="head">
         <marquee><b>Welcome to Muse Playlist manager </b></marquee>
     </div>

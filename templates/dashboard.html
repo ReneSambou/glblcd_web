@@ -9,11 +9,12 @@
 </head>
 <body class="dashboard">
     <div class="head">
-        <b>Welcome to Muse Playlist manager </b>
+     <b>Welcome,  {{username}}  </b>
     </div>
-        <input class="search" placeholder="search song ">
-    <div class="container">
-        <b >Your Playlists</b>
-    </div>
+        <input class="search" placeholder="search songs ">
+    
+    <form method="POST" action="/logout">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
 </body>
 </html>
